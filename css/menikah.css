@@ -652,3 +652,8 @@ body.preloader-site {
   text-align: center;
   padding: 10px;
 }
+
+#invitation {
+  font-family: 'rouge script', 'Times New Roman', Times, serif;
+  font-size: 32px;
+}

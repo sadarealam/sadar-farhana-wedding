@@ -192,8 +192,20 @@
           By asking for the grace and pleasure of Allah swt,
           <br />
           <br />
-          we intend to invite Mr/Mrs/Brothers/Sisters to our wedding
+          we intend to invite <em id="invitation">Mr/Mrs/Brothers/Sisters</em> to our wedding
         </p>
+        <script>
+          const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+          });
+          // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+          let value = params.id; // "some_value"
+          if (value){
+            value = atob(value)
+            $('#invitation').text(value)
+          }
+
+        </script>
 
         <span class="space40px"></span>
         <span class="space40px"></span>
